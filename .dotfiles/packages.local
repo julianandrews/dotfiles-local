@@ -1,2 +1,5 @@
-intenl-media-va-driver
-openssh-server
+brightnessctl
+intel-media-va-driver
+iwd
+kanshi
+power-profiles-daemon
