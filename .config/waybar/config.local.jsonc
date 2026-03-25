@@ -1,0 +1,14 @@
+{
+    "modules-right": [
+        "custom/jellyfin-status",
+        "pulseaudio",
+        "clock",
+        "tray"
+    ],
+    "custom/jellyfin-status": {
+        "exec": "status=$(cat /var/cache/page-status/jellyfin); [ \"$status\" != \"200\" ] && echo '⚠' || true; inotifywait -q -m -e modify /var/cache/page-status/jellyfin | while read; do status=$(cat /var/cache/page-status/jellyfin); [ \"$status\" != \"200\" ] && echo '⚠' || true; done",
+        "hide-empty-text": true,
+        "tooltip": true,
+        "tooltip-format": "Jellyfin: {}"
+    }
+}
