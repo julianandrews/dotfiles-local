@@ -1,14 +1,23 @@
 {
     "modules-right": [
         "custom/jellyfin-status",
+        "custom/apt-status",
         "pulseaudio",
         "clock",
         "tray"
     ],
     "custom/jellyfin-status": {
-        "exec": "status=$(cat /var/cache/page-status/jellyfin); [ \"$status\" != \"200\" ] && echo '⚠' || true; inotifywait -q -m -e modify /var/cache/page-status/jellyfin | while read; do status=$(cat /var/cache/page-status/jellyfin); [ \"$status\" != \"200\" ] && echo '⚠' || true; done",
+        "exec": "inotifywait -m -e modify -e create --format '%w' /var/cache/page-status/jellyfin 2>/dev/null | while IFS= read -r f; do [ \"$(cat -- \"$f\" 2>/dev/null)\" != '200' ] && echo '{\"text\": \"\", \"tooltip\": \"jellyfin.seemyvest.net down\", \"class\": \"alert\"}' || echo; done",
+        "return-type": "json",
         "hide-empty-text": true,
-        "tooltip": true,
-        "tooltip-format": "Jellyfin: {}"
+        "on-click": "sensible-browser http://jellyfin.seemyvest.net",
+        "on-click-right": "foot ssh gargantua-two",
+    },
+    "custom/apt-status": {
+        "exec": "inotifywait -m -e modify -e create --format '%w' /var/cache/page-status/apt 2>/dev/null | while IFS= read -r f; do [ \"$(cat -- \"$f\" 2>/dev/null)\" != '200' ] && echo '{\"text\": \"\", \"tooltip\": \"apt.seemyvest.net down\", \"class\": \"alert\"}' || echo; done",
+        "return-type": "json",
+        "hide-empty-text": true,
+        "on-click": "sensible-browser http://apt.seemyvest.net",
+        "on-click-right": "foot ssh gargantua-two",
     }
 }
