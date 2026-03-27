@@ -4,6 +4,7 @@
         "custom/gargantua-two-status",
         "custom/jellyfin-status",
         "custom/apt-status",
+        "bluetooth",
         "wireplumber",
         "clock",
         "tray"
