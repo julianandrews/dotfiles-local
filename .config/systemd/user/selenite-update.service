@@ -1,0 +1,11 @@
+[Unit]
+Description=Selenite Lamp Update Service
+ConditionPathExists=/dev/selenite-lamp
+
+[Service]
+ExecStart=/usr/bin/selenite-lamp-updater -c %E/selenite-lamp-updater/config.toml
+Restart=always
+
+[Install]
+WantedBy=default.target
+WantedBy=dev-selenite\x2dlamp.device

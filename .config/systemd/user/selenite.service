@@ -1,0 +1,11 @@
+[Unit]
+Description=Selenite Lamp Service
+ConditionPathExists=/dev/selenite-lamp
+
+[Service]
+ExecStart=/usr/bin/selenite-lamp /dev/selenite-lamp watch-file %t/selenite-lamp.json
+Restart=always
+
+[Install]
+WantedBy=default.target
+WantedBy=dev-selenite\x2dlamp.device
