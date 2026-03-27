@@ -4,7 +4,7 @@
         "custom/gargantua-two-status",
         "custom/jellyfin-status",
         "custom/apt-status",
-        "pulseaudio",
+        "wireplumber",
         "clock",
         "tray"
     ],
