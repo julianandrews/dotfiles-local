@@ -1,8 +1,9 @@
 {
     "modules-right": [
+        "bluetooth",
+        "wireplumber",
         "network",
         "battery",
-        "pulseaudio",
         "clock",
         "tray"
     ],
