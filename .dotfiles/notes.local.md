@@ -9,3 +9,11 @@ EOF
 sudo usermod -aG dialout $USER
 systemctl --user enable selenite{,-update}.service
 ```
+
+## Rustic backups
+
+```
+curl -sSL "https://github.com/rustic-rs/rustic/releases/latest/download/rustic-$(curl -sSL https://api.github.com/repos/rustic-rs/rustic/releases/latest | jq -r .tag_name)-x86_64-unknown-linux-gnu.tar.gz" | tar -xzf - -C ~/.local/bin
+rclone config
+systemctl --user enable --now rustic.timer
+```
