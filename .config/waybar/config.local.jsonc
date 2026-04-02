@@ -26,7 +26,7 @@
         "format": "{icon}",
         "hide-empty-text": true,
         "interval": 30,
-        "on-click": "foot ssh gargantua-two",
+        "on-click": "foot ssh -t gargantua-two 'systemctl --failed; bash -i'",
         "format-icons": {
             "down": "⬡",
         },
