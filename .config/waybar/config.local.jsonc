@@ -15,7 +15,7 @@
         "format": "{icon}",
         "hide-empty-text": true,
         "interval": 30,
-        "on-click": "foot",
+        "on-click": "footclient bash -c '/usr/bin/systemctl --failed; bash -i'",
         "format-icons": {
             "down": "⏻",
         },
@@ -26,7 +26,7 @@
         "format": "{icon}",
         "hide-empty-text": true,
         "interval": 30,
-        "on-click": "foot ssh -t gargantua-two 'systemctl --failed; bash -i'",
+        "on-click": "footclient ssh -t gargantua-two 'systemctl --failed; bash -i'",
         "format-icons": {
             "down": "⬡",
         },
@@ -39,7 +39,7 @@
         "hide-empty-text": true,
         "interval": 30,
         "on-click": "sensible-browser https://jellyfin.seemyvest.net",
-        "on-click-right": "foot ssh gargantua-two",
+        "on-click-right": "footclient ssh gargantua-two",
         "format-icons": {
             "down": "",
         },
@@ -52,7 +52,7 @@
         "hide-empty-text": true,
         "interval": 30,
         "on-click": "sensible-browser https://apt.seemyvest.net",
-        "on-click-right": "foot ssh gargantua-two",
+        "on-click-right": "footclient ssh gargantua-two",
         "format-icons": {
             "down": "",
         },
