@@ -14,6 +14,7 @@ systemctl --user enable selenite{,-update}.service
 
 ```
 curl -sSL "https://github.com/rustic-rs/rustic/releases/latest/download/rustic-$(curl -sSL https://api.github.com/repos/rustic-rs/rustic/releases/latest | jq -r .tag_name)-x86_64-unknown-linux-gnu.tar.gz" | tar -xzf - -C ~/.local/bin
+# Log into backblaze and get a key ready
 rclone config
 systemctl --user enable --now rustic.timer
 ```
