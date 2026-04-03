@@ -15,7 +15,7 @@
         "format": "{icon}",
         "hide-empty-text": true,
         "interval": 30,
-        "on-click": "footclient bash -c '/usr/bin/systemctl --failed; bash -i'",
+        "on-click": "footclient bash -c '/usr/bin/systemctl --user --failed; bash -i'",
         "format-icons": {
             "down": "⏻",
         },
