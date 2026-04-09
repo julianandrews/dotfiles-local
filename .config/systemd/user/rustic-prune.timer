@@ -1,0 +1,10 @@
+[Unit]
+Description=Weekly rustic prune timer
+
+[Timer]
+OnCalendar=weekly
+RandomizedDelaySec=5m
+Persistent=true
+
+[Install]
+WantedBy=timers.target
