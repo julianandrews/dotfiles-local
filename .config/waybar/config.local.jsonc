@@ -1,5 +1,6 @@
 {
     "modules-right": [
+        "custom/maildir",
         "bluetooth",
         "wireplumber",
         "network",
