@@ -1,6 +1,6 @@
 {
     "modules-right": [
-        "custom/gmail",
+        "custom/maildir",
         "custom/madagascar-status",
         "custom/gargantua-two-status",
         "custom/jellyfin-status",
@@ -33,7 +33,7 @@
         },
     },
     "custom/jellyfin-status": {
-        "exec": "~/.config/waybar/scripts/page-status.sh jellyfin.seemyvest.net",
+        "exec": "~/.config/waybar/scripts/page-status jellyfin.seemyvest.net",
         "return-type": "json",
         "format": "{icon}",
         "tooltip": "jellyfin.seemyvest.net down",
@@ -46,7 +46,7 @@
         },
     },
     "custom/apt-status": {
-        "exec": "~/.config/waybar/scripts/page-status.sh apt.seemyvest.net",
+        "exec": "~/.config/waybar/scripts/page-status apt.seemyvest.net",
         "return-type": "json",
         "format": "{icon}",
         "tooltip": "apt.seemyvest.net down",
