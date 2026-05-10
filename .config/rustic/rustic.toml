@@ -17,3 +17,6 @@ sources = ["/home/julian/Media/Videos"]
 
 [[backup.snapshots]]
 sources = ["/home/julian/.password-store"]
+
+[[backup.snapshots]]
+sources = ["/home/julian/.local/share/mail/fastmail"]
