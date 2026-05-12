@@ -23,3 +23,6 @@ sources = ["/home/julian/.local/share/mail/fastmail"]
 
 [[backup.snapshots]]
 sources = ["/home/julian/.local/share/contacts"]
+
+[[backup.snapshots]]
+sources = ["/home/julian/.local/share/calendars"]
