@@ -4,3 +4,4 @@ Description=Run rustic backups
 [Service]
 Type=oneshot
 ExecStart=%h/.local/bin/rustic backup
+LoadCredentialEncrypted=rustic-password:rustic-password.cred

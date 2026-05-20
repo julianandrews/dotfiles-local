@@ -14,8 +14,9 @@ systemctl --user enable selenite{,-update}.service
 
 ```
 curl -sSL "https://github.com/rustic-rs/rustic/releases/latest/download/rustic-$(curl -sSL https://api.github.com/repos/rustic-rs/rustic/releases/latest | jq -r .tag_name)-x86_64-unknown-linux-gnu.tar.gz" | tar -xzf - -C ~/.local/bin rustic
+
 # Log into backblaze and get a key ready
+pass show madagascar/rustic/password | systemd-creds encrypt --user --name=rustic-password - ~/.config/credstore.encrypted/rustic-password.cred
 rclone config
-# Make sure the password file is at ~/.local/share/rustic/password
 systemctl --user enable --now rustic.timer
 ```

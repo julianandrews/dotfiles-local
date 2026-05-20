@@ -1,6 +1,6 @@
 [repository]
 repository = "rclone:backblaze:madagascar-backups"
-password-file = "/home/julian/.local/share/rustic/password"
+password-command = "/home/julian/.local/bin/systemd-pass-fallback rustic-password madagascar/rustic/password"
 
 [forget]
 keep-daily = 14

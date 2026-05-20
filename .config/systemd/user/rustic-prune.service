@@ -4,3 +4,4 @@ Description=Prune rustic backup repository
 [Service]
 Type=oneshot
 ExecStart=%h/.local/bin/rustic forget --prune
+LoadCredentialEncrypted=rustic-password:rustic-password.cred
