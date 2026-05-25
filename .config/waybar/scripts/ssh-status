@@ -1,0 +1,20 @@
+#!/bin/sh
+set -e
+
+usage() {
+    echo "Usage: $(basename "$0") <host> <command...>" >&2
+    exit 1
+}
+
+[ $# -ge 2 ] || usage
+
+host="$1"
+shift
+
+if output=$(ssh -o BatchMode=yes -o ConnectTimeout=5 "$host" "$@" 2>/dev/null); then
+    if [ -n "$output" ]; then
+        printf '{"text":"⬡","alt":"down","class":"down","tooltip":"service down on %s"}\n' "$host"
+    fi
+else
+    printf '{"text":"⬡","alt":"nodata","class":"nodata","tooltip":"%s unreachable"}\n' "$host"
+fi

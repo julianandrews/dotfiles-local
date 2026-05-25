@@ -22,7 +22,7 @@
         },
     },
     "custom/gargantua-two-status": {
-        "exec": "ssh gargantua-two systemctl --failed --legend=no | grep -q . && echo '{\"text\": \"down\", \"alt\": \"down\", \"tooltip\": \"service down on gargantua-two\"}'",
+        "exec": "~/.config/waybar/scripts/ssh-status gargantua-two systemctl --failed --legend=no",
         "return-type": "json",
         "format": "{icon}",
         "hide-empty-text": true,
@@ -30,6 +30,7 @@
         "on-click": "footclient ssh -t gargantua-two 'systemctl --failed; bash -i'",
         "format-icons": {
             "down": "⬡",
+            "nodata": "⬡",
         },
     },
     "custom/jellyfin-status": {
