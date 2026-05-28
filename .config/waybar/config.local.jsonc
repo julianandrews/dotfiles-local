@@ -1,5 +1,6 @@
 {
     "modules-right": [
+        "custom/systemd-status",
         "custom/maildir",
         "bluetooth",
         "wireplumber",
