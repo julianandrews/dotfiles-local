@@ -2,7 +2,7 @@
 Description=Weekly rustic prune timer
 
 [Timer]
-OnCalendar=weekly
+OnCalendar=daily
 RandomizedDelaySec=5m
 Persistent=true
 

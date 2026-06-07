@@ -3,7 +3,7 @@ repository = "rclone:backblaze:madagascar-backups"
 password-command = "/home/julian/.local/bin/systemd-pass-fallback rustic-password madagascar/rustic/password"
 
 [forget]
-keep-daily = 14
+keep-daily = 7
 keep-weekly = 5
 
 [[backup.snapshots]]
@@ -20,6 +20,7 @@ sources = ["/home/julian/.password-store"]
 
 [[backup.snapshots]]
 sources = ["/home/julian/.local/share/mail/fastmail"]
+globs = ["!.notmuch", '!.uidvalidity', '!.mbsyncstate']
 
 [[backup.snapshots]]
 sources = ["/home/julian/.local/share/contacts"]
