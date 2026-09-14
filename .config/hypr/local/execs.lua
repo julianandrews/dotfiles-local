@@ -1,0 +1,1 @@
+-- Machine-specific autostart. Use hl.on("hyprland.start", function() ... end) or hl.exec_cmd(...).
