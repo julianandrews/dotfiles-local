@@ -27,3 +27,6 @@ sources = ["/home/julian/.local/share/contacts"]
 
 [[backup.snapshots]]
 sources = ["/home/julian/.local/share/calendars"]
+
+[[backup.snapshots]]
+sources = ["/home/julian/.local/share/intake"]
