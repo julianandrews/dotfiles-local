@@ -5,3 +5,5 @@ Description=Run rustic backups
 Type=oneshot
 ExecStart=%h/.local/bin/rustic backup
 LoadCredentialEncrypted=rustic-password:rustic-password.cred
+LoadCredentialEncrypted=rclone-password:rclone-password.cred
+Environment="RCLONE_PASSWORD_COMMAND=/usr/bin/systemd-creds cat rclone-password"
