@@ -1,0 +1,7 @@
+[Unit]
+Description=Prune rustic gargantua-two repository
+
+[Service]
+Type=oneshot
+ExecStart=%h/.local/bin/rustic -P gargantua-two forget --prune
+LoadCredentialEncrypted=rustic-password:rustic-password.cred

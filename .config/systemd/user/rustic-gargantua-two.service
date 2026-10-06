@@ -1,0 +1,7 @@
+[Unit]
+Description=Run rustic backup to gargantua-two
+
+[Service]
+Type=oneshot
+ExecStart=%h/.local/bin/rustic -P gargantua-two backup
+LoadCredentialEncrypted=rustic-password:rustic-password.cred

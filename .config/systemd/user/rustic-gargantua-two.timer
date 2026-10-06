@@ -1,0 +1,10 @@
+[Unit]
+Description=Trigger rustic backup to gargantua-two daily
+
+[Timer]
+OnCalendar=*-*-* 01:30:00
+RandomizedDelaySec=10m
+Persistent=true
+
+[Install]
+WantedBy=timers.target

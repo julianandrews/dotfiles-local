@@ -1,5 +1,5 @@
 [Unit]
-Description=Weekly rustic prune timer
+Description=Daily rustic prune timer
 
 [Timer]
 OnCalendar=daily

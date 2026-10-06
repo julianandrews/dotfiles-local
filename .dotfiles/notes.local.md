@@ -19,4 +19,7 @@ curl -sSL "https://github.com/rustic-rs/rustic/releases/latest/download/rustic-$
 pass show madagascar/rustic/password | systemd-creds encrypt --user --name=rustic-password - ~/.config/credstore.encrypted/rustic-password.cred
 rclone config
 systemctl --user enable --now rustic.timer
+systemctl --user enable --now rustic-prune.timer
+systemctl --user enable --now rustic-gargantua-two.timer
+systemctl --user enable --now rustic-gargantua-two-prune.timer
 ```
