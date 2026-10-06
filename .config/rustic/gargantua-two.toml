@@ -1,14 +1,6 @@
-# Second (on-site) rustic repository for madagascar, pushed over SFTP to the
-# external disk on gargantua-two. The repository is encrypted client-side, so
-# gargantua-two only ever stores ciphertext.
-#
-# Usage: rustic -P gargantua-two <command>
-
 [repository]
 repository = "opendal:sftp"
-# Intentionally shared with the Backblaze repo: single source of truth in pass
-# at security/backblaze-recovery/rustic-password (credential: rustic-password).
-password-command = "/home/julian/.local/bin/systemd-pass-fallback rustic-password security/backblaze-recovery/rustic-password"
+password-command = "/home/julian/.local/bin/systemd-pass-fallback rustic-password security/rustic-password"
 
 [repository.options]
 endpoint = "192.168.255.42"

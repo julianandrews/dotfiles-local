@@ -1,6 +1,6 @@
 [repository]
 repository = "rclone:backblaze:madagascar-backups"
-password-command = "/home/julian/.local/bin/systemd-pass-fallback rustic-password security/backblaze-recovery/rustic-password"
+password-command = "/home/julian/.local/bin/systemd-pass-fallback rustic-password security/rustic-password"
 
 [forget]
 keep-daily = 7
@@ -14,9 +14,6 @@ sources = ["/home/julian/Media/Pictures"]
 
 [[backup.snapshots]]
 sources = ["/home/julian/Media/Videos"]
-
-[[backup.snapshots]]
-sources = ["/home/julian/.password-store"]
 
 [[backup.snapshots]]
 sources = ["/home/julian/.local/share/mail/fastmail"]
